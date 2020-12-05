@@ -4,6 +4,7 @@
    min-height: 100%;
 }
 .page {
+   // отключаем стандартный скролл
    position: fixed;
    width: 100%;
    height: 100%;
@@ -18,13 +19,20 @@
    }
 }
 .screen {
+   // делаем каждый экран фуллскриновым
    flex: 1 0 100%;
    position: relative;
    &__content {
       position: relative;
       z-index: 2;
    }
+   &__title {
+      color: @black;
+      font-size: 64px;
+
+   }
    &__body {
+      // для паралакса
       position: absolute;
       width: 100%;
       height: 100%;
