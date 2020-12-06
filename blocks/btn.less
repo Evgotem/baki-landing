@@ -1,5 +1,58 @@
 // main: ../css/style.less
 
 .btn {
+   
+   &__text {
+      color: #ffffff;
+      text-decoration: none; 
+      display: inline-block;
+      padding: 10px 57px;
+      border: 1px solid @secondary;
+      border-radius: 57px;
+      font-size: 14px;
+      background: #42464e;
+      transition: all 0.5s ease;
+      &:hover {
+         background: @secondary;
+         color: @primary;
+         transition: all 0.2s ease;
+      }
+   }
+}
+
+.request-btn {
+   position: relative;
+   text-decoration: none;
+   font-weight: 700;
+   font-size: 24px;
+   max-width: 280px;
    display: inline-block;
+   &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      display: block;
+      width: 77px;
+      height: 77px;
+      border-radius: 50%;
+      background: @secondary;
+   }
+   &::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: transparent;
+      border-top: 4px solid @primary;
+      border-right: 4px solid @primary;
+      position: absolute;
+      right: 40px;
+      top: 50%;
+      border-radius: 4px;
+      transform-origin: center center;
+      transform: rotate(45deg) translateY(-50%);
+      z-index: 10;
+   }
 }
