@@ -51,6 +51,7 @@
   left: 0;
 }
 .preview {
+  position: relative;
   background: #4d515a;
   border-radius: 0 0 100px 100px;
   background-image: url('../img/header-bg.png');
@@ -77,7 +78,7 @@
 .preview__title {
   font-weight: 800;
   font-size: 78px;
-  max-width: 800px;
+  max-width: 776px;
   line-height: 1.36;
 }
 .preview__subtitle {
@@ -85,7 +86,26 @@
   font-weight: 400;
   max-width: 500px;
   line-height: 1.59;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  margin-top: 52px;
+}
+.preview__content {
+  margin-left: auto;
+  max-width: fit-content;
+  padding-top: 203px;
+}
+.preview__container {
+  max-width: 435px;
+  margin: 0 auto;
+}
+.round-scroll {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transform: translateY(50%);
 }
 .btn__text {
   color: #ffffff;
@@ -126,15 +146,14 @@
 .request-btn::before {
   content: '';
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background: transparent;
-  border-top: 4px solid #4d515a;
-  border-right: 4px solid #4d515a;
+  border-top: 5px solid #4d515a;
+  border-right: 5px solid #4d515a;
   position: absolute;
   right: 40px;
   top: 50%;
-  border-radius: 4px;
   transform-origin: center center;
   transform: rotate(45deg) translateY(-50%);
   z-index: 10;
@@ -186,22 +205,28 @@
 .page__pagination {
   position: absolute;
   top: 50%;
-  right: 50px;
+  left: 50px;
   transform: translate(0, -50%);
   display: flex;
   flex-direction: column;
 }
 .page__bullet {
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  border: 1px solid white;
   margin: 10px 0;
   border-radius: 50%;
   transition: background-color 0.3s ease 0s;
 }
 .page__bullet_active {
-  background-color: #fff;
+  margin-bottom: 33px;
+  margin-top: 33px;
+  border: 5px solid #CAFF5E;
+  width: 50px;
+  height: 50px;
+  transform: translateX(-22px);
 }
 .page__scroll {
   position: absolute;
@@ -218,6 +243,33 @@
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
+}
+.production {
+  background: #575758;
+}
+.constructions {
+  background: #747564;
+}
+.services {
+  background: #101940;
+}
+.advantages {
+  background: #618374;
+}
+.warranty {
+  background: #874878;
+}
+.about {
+  background: #797978;
+}
+.projects {
+  background: #807947;
+}
+.contacts {
+  background: #486794;
+}
+.footer {
+  background: #254298;
 }
 .container {
   max-width: 1195px;
