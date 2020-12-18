@@ -25,10 +25,12 @@ let pageSlider = new Swiper('.page', {
    // управление колесом мыши
    mousewheel: {
       // чувствительность калеса мыши
-      sensitivity: 1,
+      sensitivity: 10,
       // класс объекта, на котором будет срабатывать прокрутка мышью.
       // eventsTarget: '.image-slider'
    },
+   
+   parallax: true,
    // отключение функционала если слайдов меньше чем нужно
    watchOverflow: true,
 
@@ -52,6 +54,14 @@ let pageSlider = new Swiper('.page', {
       clickable: true,
       bulletClass: 'page__bullet',
       bulletActiveClass: 'page__bullet_active',
+     renderBullet: function (index, className) {
+        let zero = '0';
+        if (index > 8) {
+           zero = '';
+        }
+      // нумерация 01, 02 и тд.
+        return `<span class=${className}><span class='page__bullet--number'>${zero+(index+1)}</span></span>`;
+     }
    },
    // скролл
    scrollbar: {
@@ -86,23 +96,27 @@ function menuSlider() {
          menuLink.onclick = e => {
             menuSliderRemove();
             // сделать чтобы при нажатии на пункт меню слайдилось на определенный экран
-            if (menuLinks[0]) {
+            if (i === 0) {
                pageSlider.slideTo(1, 800);
-            } 
+            }
             else if (i === 1) {
                pageSlider.slideTo(4, 800);
-            } 
+            }
             else if (i === 2) {
                pageSlider.slideTo(6, 800);
-            } 
-            else if (i === 3) {
-            pageSlider.slideTo(9, 800);
             }
-         menuLink.classList.add('active');
-         e.preventDefault();
+            else if (i === 3) {
+               pageSlider.slideTo(8, 800);
+            }
+            menuLink.classList.add('active');
+            e.preventDefault();
+            console.log(pageSlider.realIndex);
+         }
+
+      }
    }
 }
-    
+
 function menuSliderRemove() {
    let menuLinkActive = document.querySelector('.header__link.active');
    if (menuLinkActive) {

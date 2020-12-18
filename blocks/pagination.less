@@ -8,11 +8,11 @@
       transform: translate(0, -50%);
       display: flex;
       flex-direction: column;
-      
+  
    }
 
+
    &__bullet {
-      
       width: 10px;
       height: 10px;
       cursor: pointer;
@@ -21,14 +21,25 @@
       margin: 10px 0;
       border-radius: 50%;
       transition: background-color 0.3s ease 0s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       &_active {
          margin-bottom: 33px;
          margin-top: 33px;
          border: 5px solid @secondary;
          width: 50px;
          height: 50px;
-         transform: translateX(-22px);
-         
+         transform: translateX(-25px);
+      }
+      &--number {
+         display: none;
+         color: white;
+      }
+      &_active .page__bullet--number {
+         display: block;
+         font-weight: 800;
+         font-size: 16px;
       }
    }
    &__scroll {

@@ -2,9 +2,9 @@
 
 .header {
    width: 100%;
-   padding-top: 45px;
+   padding: 45px 0 0 0;
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
    align-items: center;
    font-weight: 500;
    
@@ -24,6 +24,9 @@
          border-bottom: 3px solid @secondary;
          transition: all 0.2s ease;
       }
+      @media (max-width: 900px) {
+         margin-right: 35px;
+      }
    }
    &__contacts {
       display: flex;
@@ -31,6 +34,9 @@
       font-size: 18px;
       align-items: flex-end;
       margin-right: 36px;
+      @media (max-width: 1300px){
+         display: none;
+      }
       &-link {
          color: #fff;
          text-decoration: none;
@@ -43,5 +49,34 @@
    }
    &__wrapper {
       display: flex;
+   }
+   &__button a {
+      @media (max-width: 900px){
+         font-size: 0px;
+         padding: 0;
+         width: 36px;
+         height: 36px;
+      }
+   }
+   &__button {
+      @media (max-width: 900px){
+         position: relative;
+      }
+   }
+   &__menu {
+      @media (max-width: 900px) {
+         display: none;
+      }
+   }
+}
+
+.phone__icon {
+   display: none;
+   @media (max-width: 900px) {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
    }
 }

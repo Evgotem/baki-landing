@@ -1,11 +1,10 @@
 // main: ../css/style.less
 
 .btn {
-   
    &__text {
       color: #ffffff;
       text-decoration: none; 
-      display: inline-block;
+      display: block;
       padding: 10px 57px;
       border: 1px solid @secondary;
       border-radius: 57px;
@@ -16,6 +15,11 @@
          background: @secondary;
          color: @primary;
          transition: all 0.2s ease;
+         @media (max-width: 900px) {
+            &:hover {
+               background: none;
+            }
+         }
       }
    }
 }
@@ -55,3 +59,4 @@
       z-index: 10;
    }
 }
+
