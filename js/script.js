@@ -125,3 +125,14 @@ function menuSliderRemove() {
 }
 
 pageSlider.init();
+
+// вещаем при нажатии на бургер класс active
+let burger = document.querySelector('.burger');
+let headerMenu = document.querySelector('.header__menu');
+let header = document.querySelector('.header');
+burger.onclick = () => {
+   burger.classList.toggle("active");
+   headerMenu.classList.toggle("active");
+   header.classList.toggle("active");
+   
+}

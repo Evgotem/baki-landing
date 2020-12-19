@@ -7,7 +7,13 @@
    justify-content: space-around;
    align-items: center;
    font-weight: 500;
-   
+   transition: background 1s ease;
+   position: relative;
+   &.active {
+      background: @primary;
+      transition: background 1s ease;
+      position: relative;
+   }
    &__link {
       display: inline-block;
       color: #fff;
@@ -64,8 +70,31 @@
       }
    }
    &__menu {
+      &.active {
+         position: absolute;
+         top: 100%;
+         background: @primary;
+         z-index: 50;
+         transform: translateY(0px);
+         transition: all 1s ease;
+         & .header__link {
+            margin-bottom: 15px;
+            &:hover {
+               border-bottom: none;
+            }
+         }
+      }
       @media (max-width: 900px) {
-         display: none;
+         position: absolute;
+         padding-left: 35px;
+         padding-top: 30px;
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         left: 0;
+         top: 0;
+         transform: translateY(-200px);
+         transition: all 1s ease;
       }
    }
 }
@@ -80,3 +109,5 @@
       transform: translate(-50%, -50%);
    }
 }
+
+
