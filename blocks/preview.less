@@ -7,17 +7,24 @@
    border-radius: 0 0 100px 100px;
    background-image: url('../img/header-bg.png');
    background-repeat: no-repeat;
-   background-position: 32% 0;
    color: #fff;
+   background-position: 12% 40%;
+   
+   @media (min-width: 1800px) {
+      background-position: 32% -55px;
+   }
+   @media @maw1400 {
+      background-size: 50%;
+   }
    @media @maw900 {
-      background-image: url('../img/header-bg.png');
-      background-size: 80%;
+      background-size: 95%;
       background-position: 0 15%;
    }
    &__suptitle {
-      font-weight: 700;
+      font-weight: bold;
       position: relative;
-      padding: 22px 0;
+      letter-spacing: 2.5px;
+      padding: 29px 0;
       &::before {
          content: '';
          display: block;
@@ -35,6 +42,9 @@
       font-size: 78px;
       max-width: 776px;
       line-height: 1.36;
+      @media @maw1400 {
+         font-size: 60px;
+      }
    }
    &__subtitle {
       font-size: 18px;
@@ -43,11 +53,14 @@
       line-height: 1.59;
       margin-bottom: 40px;
       margin-top: 52px;
+      @media @maw1400 {
+         margin-top: 34px;
+      }
    }
    &__content {
       margin-left: auto;
       max-width: fit-content;
-      padding-top: 203px;
+      padding-top: 197px;
    }
    &__container {
       max-width: 435px;

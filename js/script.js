@@ -1,3 +1,4 @@
+let wrapper = document.querySelector('.wrapper');
 let pageSlider = new Swiper('.page', {
    // свои классы
    wrapperClass: 'page__wrapper',
@@ -25,7 +26,7 @@ let pageSlider = new Swiper('.page', {
    // управление колесом мыши
    mousewheel: {
       // чувствительность калеса мыши
-      sensitivity: 10,
+   
       // класс объекта, на котором будет срабатывать прокрутка мышью.
       // eventsTarget: '.image-slider'
    },
@@ -77,12 +78,16 @@ let pageSlider = new Swiper('.page', {
       // событие инициализации
       init: function () {
          menuSlider();
+         setScrollType();
       },
       // событие смены слайда
       slideChange: function () {
          menuSliderRemove();
          menuLinks[pageSlider.realIndex].classList.add('active')
       }
+   },
+   resize: function () {
+      setScrollType();
    }
 });
 
@@ -124,6 +129,26 @@ function menuSliderRemove() {
    }
 }
 
+// отключаем поэкранную прокрутку когда контента больше 100% по высоте
+function setScrollType() {
+   if(wrapper.classList.contains('free')) {
+      wrapper.classList.remove('free');
+      pageSlider.params.freeMode = false;
+   }
+   for (let i = 0; i < pageSlider.slides.length; i++) {
+      const pageSlide = pageSlider.slides[i];
+      const pageSlideContent = pageSlide.querySelector('.screen__content');
+      if (pageSlideContent) {
+         const pageSlideContentHeight = pageSlideContent.offsetHeight;
+         if (pageSlideContentHeight > window.innerHeight) {
+            wrapper.classList.add('free');
+            pageSlider.params.freeMode = true;
+            break;
+         }
+      }
+   }
+}
+
 pageSlider.init();
 
 // вещаем при нажатии на бургер класс active
@@ -136,3 +161,6 @@ burger.onclick = () => {
    header.classList.toggle("active");
    
 }
+
+
+

@@ -2,7 +2,13 @@
 
 .wrapper {
    min-height: 100%;
+   &.free .page__pagination {
+      transition: all 0.3s ease 0s;
+      transform: translateX(-150%);
+      opacity: 0;
+   }
 }
+
 .page {
    // отключаем стандартный скролл
    position: fixed;
