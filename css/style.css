@@ -59,6 +59,13 @@
   background-position: 32% 0;
   color: #fff;
 }
+@media (max-width: 900px) {
+  .preview {
+    background-image: url('../img/header-bg.png');
+    background-size: 80%;
+    background-position: 0 15%;
+  }
+}
 .preview__suptitle {
   font-weight: 700;
   position: relative;
@@ -221,6 +228,18 @@
 .header__contacts-link:hover {
   color: #CAFF5E;
 }
+.header__contacts--hidden {
+  display: none;
+}
+@media (max-width: 900px) {
+  .header__contacts--hidden {
+    display: block;
+  }
+  .header__contacts--hidden .header__contacts-link {
+    display: block;
+    margin-top: 15px;
+  }
+}
 .header__wrapper {
   display: flex;
 }
@@ -239,11 +258,12 @@
 }
 .header__menu.active {
   position: absolute;
+  padding-bottom: 15px;
   top: 100%;
   background: #4d515a;
   z-index: 50;
   transform: translateY(0px);
-  transition: all 1s ease;
+  transition: all 0.8s ease;
 }
 .header__menu.active .header__link {
   margin-bottom: 15px;
@@ -261,8 +281,8 @@
     flex-direction: column;
     left: 0;
     top: 0;
-    transform: translateY(-200px);
-    transition: all 1s ease;
+    transform: translateY(-250px);
+    transition: all 0.5s ease;
   }
 }
 .phone__icon {
