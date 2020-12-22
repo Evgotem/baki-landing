@@ -29,8 +29,12 @@
    text-decoration: none;
    font-weight: 700;
    font-size: 24px;
-   max-width: 280px;
+   max-width:320px;
    display: inline-block;
+   @media @maw375 {
+      font-size: 13px;
+      max-width: 89px;
+   }
    &::after {
       content: '';
       position: absolute;
@@ -42,6 +46,11 @@
       height: 77px;
       border-radius: 50%;
       background: @secondary;
+      @media @maw375 {
+         width: 34px;
+         height: 34px;
+         right: -50px;
+      }
    }
    &::before {
       content: '';
@@ -49,14 +58,20 @@
       width: 18px;
       height: 18px;
       background: transparent;
-      border-top: 5px solid @primary;
-      border-right: 5px solid @primary;
+      border-top: 3px solid @primary;
+      border-right: 3px solid @primary;
       position: absolute;
       right: 40px;
       top: 50%;
       transform-origin: center center;
       transform: rotate(45deg) translateY(-50%);
       z-index: 10;
+      @media @maw375 {
+         width: 10px;
+         height: 10px;
+         right: -32px;
+         border-width: 2px;
+      }
    }
 }
 

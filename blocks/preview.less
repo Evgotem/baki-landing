@@ -13,18 +13,34 @@
    @media (min-width: 1800px) {
       background-position: 32% -55px;
    }
-   @media @maw1400 {
+   @media @maw1440 {
       background-size: 50%;
    }
    @media @maw900 {
-      background-size: 95%;
-      background-position: 0 15%;
+      background-size: 50%;
+      background-position: 50% 15%;
+      padding: 0 10px;
+      border-radius: 0 0 40px 40px;
+   }
+   @media @maw414 {
+      background-size: 91%;
+      background-position: 50% 10%;
    }
    &__suptitle {
       font-weight: bold;
       position: relative;
       letter-spacing: 2.5px;
       padding: 29px 0;
+      @media @maw414 {
+         margin: 0;
+      }
+      @media @maw375 {
+         font-size: 10px;
+         padding: 20px 0 8px;
+         letter-spacing: 0.2px;
+         line-height: 0;
+         font-weight: 300;
+      }
       &::before {
          content: '';
          display: block;
@@ -35,6 +51,10 @@
          width: 59px;
          height: 9px;
          border-radius: 37px;
+         @media @maw375 {
+            width: 33px;
+            height: 5px;
+         }
       }
    }
    &__title {
@@ -42,8 +62,20 @@
       font-size: 78px;
       max-width: 776px;
       line-height: 1.36;
-      @media @maw1400 {
-         font-size: 60px;
+      @media @maw1440 {
+         font-size: 45px;
+         max-width: 470px;
+      }
+      @media @maw414 {
+         font-size: 38px;
+      }
+      @media @maw375 {
+         font-size: 27px;
+         line-height: 40px;
+      }
+      @media @maw280 {
+         font-size: 25px;
+         
       }
    }
    &__subtitle {
@@ -53,18 +85,43 @@
       line-height: 1.59;
       margin-bottom: 40px;
       margin-top: 52px;
-      @media @maw1400 {
+      @media @maw1440 {
          margin-top: 34px;
+      }
+      @media @maw414 {
+         margin: 20px 0;
+      }
+      @media @maw375 {
+         font-size: 14px;
+         max-width: 265px;
+         margin: 7px 0 0 0;
+         line-height: 18px;
+         font-weight: 300;
+         margin-bottom: 15px;
       }
    }
    &__content {
       margin-left: auto;
       max-width: fit-content;
       padding-top: 197px;
+      @media @maw1440 {
+         padding-top: 136px;
+         padding-right: 15px;
+      }
+      @media @maw414 {
+         padding-left: 15px;
+         padding-right: 15px;
+      }
+      @media @maw375 {
+         padding: 250px 0 0 19px;
+      }
    }
    &__container {
       max-width: 435px;
       margin: 0 auto;
+      @media @maw1440 {
+         margin: 0;
+      }
    }
 }
 
@@ -74,6 +131,12 @@
    position: absolute;
    bottom: 0;
    left: 50%;
-   transform: translateX(-50%);
-   transform: translateY(50%);
+   transform: translate(-50%, 50%);
+   img {
+      width: 100%;
+   }
+   @media @maw375 {
+      width: 63px;
+      height: auto;
+   }
 }

@@ -1,7 +1,7 @@
 // main: ../css/style.less
 
 .header {
-   width: 100%;
+   max-width: 100%;
    padding: 45px 0 0 0;
    display: flex;
    justify-content: space-between;
@@ -9,16 +9,33 @@
    font-weight: 500;
    transition: background 1s ease;
    position: relative;
+   @media @maw1440 {
+      padding-left: 15px;
+      padding-right: 15px;
+   }
+   @media @maw320 {
+      padding-top: 28px;
+   }
    &.active {
       background: @primary;
       transition: background 1s ease;
       position: relative;
    }
+   &__logo {
+      img {
+         width: 36px;
+         height: auto;
+         @media @maw320 {
+            width: 16px;
+            height: auto;
+         }
+      }
+   }
    &__menu {
       padding-left: 72px;
       &.active {
          position: absolute;
-         padding-bottom: 15px;
+         padding-bottom: 20px;
          top: 100%;
          background: @primary;
          z-index: 50;
@@ -60,8 +77,8 @@
          border-bottom: 3px solid @secondary;
          transition: all 0.2s ease;
       }
-      @media @maw900 {
-         margin-right: 35px;
+      @media @maw1440 {
+         margin-right: 30px;
       }
    }
    &__contacts {
