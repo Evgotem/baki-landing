@@ -1,5 +1,47 @@
 // main: ../css/style.less
 
 .production {
-   background: #575758;
+   padding-top: 100px;
+   &__wrapper {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+   }
+   &__item {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 100%;
+      justify-content: flex-end;
+      align-items: center;
+      max-width: 377px;
+      margin-right: 40px;
+      &:last-child {
+         margin-right: 0;
+      }
+      &-text {
+         max-width: 323px;
+      }
+      &-title {
+         font-size: 43px;
+         font-weight: 800;
+         margin: 0;
+         color: @black;
+      }
+   }
+   &__img {
+      display: flex;
+      justify-content: flex-end;
+      flex: 1 1 auto;
+      height: fit-content;
+      img {
+         max-width: 100%;
+         align-self: flex-end;
+      }
+   }
+   &__content-wrapper {
+      min-height: 240px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
 }
