@@ -23,6 +23,7 @@
 .screen {
   flex: 1 0 100%;
   position: relative;
+  background: inherit;
 }
 .screen__content {
   position: relative;
@@ -52,7 +53,7 @@
 }
 .preview {
   position: relative;
-  background: #4d515a;
+  background-color: #4d515a;
   border-radius: 0 0 100px 100px;
   background-image: url('../img/header-bg.png');
   background-repeat: no-repeat;
@@ -109,7 +110,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: #CAFF5E;
+  background: #caff5e;
   width: 59px;
   height: 9px;
   border-radius: 37px;
@@ -230,14 +231,14 @@
   text-decoration: none;
   display: block;
   padding: 12px 57px;
-  border: 1px solid #CAFF5E;
+  border: 1px solid #caff5e;
   border-radius: 57px;
   font-size: 14px;
   background: #42464e;
   transition: all 0.5s ease;
 }
 .btn__text:hover {
-  background: #CAFF5E;
+  background: #caff5e;
   color: #4d515a;
   transition: all 0.2s ease;
 }
@@ -270,7 +271,7 @@
   width: 77px;
   height: 77px;
   border-radius: 50%;
-  background: #CAFF5E;
+  background: #caff5e;
 }
 @media (max-width: 375px) {
   .request-btn::after {
@@ -414,8 +415,8 @@
   margin-right: 0;
 }
 .header__link:hover {
-  color: #CAFF5E;
-  border-bottom: 3px solid #CAFF5E;
+  color: #caff5e;
+  border-bottom: 3px solid #caff5e;
   transition: all 0.2s ease;
 }
 @media (max-width: 1440px) {
@@ -442,7 +443,7 @@
   transition: 0.3s;
 }
 .header__contacts-link:hover {
-  color: #CAFF5E;
+  color: #caff5e;
 }
 .header__contacts--hidden {
   display: none;
@@ -513,7 +514,7 @@
 }
 .page__bullet_active {
   margin: 20px 0;
-  border: 5px solid #CAFF5E;
+  border: 5px solid #caff5e;
   width: 38px;
   height: 38px;
   transform: translateX(-19px);
@@ -545,6 +546,7 @@
 }
 .production {
   padding-top: 100px;
+  background-color: #e5e5e5;
 }
 .production__wrapper {
   display: flex;
@@ -626,7 +628,7 @@
 .burger:before,
 .burger:after {
   content: "";
-  background-color: #CAFF5E;
+  background-color: #caff5e;
   position: absolute;
   width: 100%;
   height: 2px;
@@ -665,5 +667,5 @@ a {
   color: inherit;
 }
 .color--secondary {
-  color: #CAFF5E;
+  color: #caff5e;
 }

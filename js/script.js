@@ -159,8 +159,14 @@ burger.onclick = () => {
    burger.classList.toggle("active");
    headerMenu.classList.toggle("active");
    header.classList.toggle("active");
-   
 }
 
+// let section = document.querySelectorAll('section');
+// for (let i = 0; i < section.length; i++) {
+   
+//    if(sectionElement.style.backgroundColor == "#e5e5e5") {
+//       document.querySelector('.page__bullet_active .page__bullet--number').style.color = '#434343';
+//    }
 
+// }
 
