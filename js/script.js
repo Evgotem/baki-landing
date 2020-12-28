@@ -36,7 +36,7 @@ let pageSlider = new Swiper('.page', {
    watchOverflow: true,
 
    // скорость
-   speed: 500,
+   speed: 700,
 
    // обновить свайпер при изменении элементов слайдера
    observer: true,
@@ -170,3 +170,10 @@ burger.onclick = () => {
 
 // }
 
+let productionWrapper = document.querySelector('production__wrapper');
+function noParallax () {
+   if (screen.width < 900) {
+      productionWrapper.getAttribute('data-swiper-parallax') = `0%`;
+      productionWrapper.getAttribute('data-swiper-parallax-opacity') = 1;
+   }
+}
