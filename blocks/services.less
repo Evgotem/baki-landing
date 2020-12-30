@@ -1,5 +1,23 @@
 // main: ../css/style.less
 
 .services {
-   background: #101940;
+   padding-top: 30px;
+   @media @maw900 {
+      padding-top: 0;
+   }
+   &__title {
+      margin-bottom: 30px;
+   }
+   &__wrapper {
+      .itemsWrapperMixin
+   }
+   &__item {
+      .itemsMixin;
+   }
+   &__img {
+      .itemImgMixin;
+   }
+   &__content-wrapper {
+      .contentWrapperMixin;
+   }
 }
