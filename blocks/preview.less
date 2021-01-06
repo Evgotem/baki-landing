@@ -108,12 +108,15 @@
          padding-top: 136px;
          padding-right: 15px;
       }
+      @media @maw1440 {
+         padding-bottom: 130px;
+      }
       @media @maw414 {
          padding-left: 15px;
          padding-right: 15px;
       }
       @media @maw375 {
-         padding: 250px 0 0 19px;
+         padding: 238px 0 50px 19px;
       }
    }
    &__container {
@@ -135,6 +138,10 @@
    z-index: 50;
    img {
       width: 100%;
+   }
+   @media @maw630 {
+      width: 100px;
+      height: auto;
    }
    @media @maw375 {
       width: 63px;

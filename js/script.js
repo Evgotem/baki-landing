@@ -31,9 +31,11 @@ let pageSlider = new Swiper('.page', {
       // eventsTarget: '.image-slider'
    },
    
-   parallax: true,
+   parallax: false,
    // отключение функционала если слайдов меньше чем нужно
    watchOverflow: true,
+   // переключение при клике на слайд
+   skideToClickedSlide: false,
 
    // скорость
    speed: 700,
@@ -170,10 +172,21 @@ burger.onclick = () => {
 
 // }
 
-let productionWrapper = document.querySelector('production__wrapper');
-function noParallax () {
-   if (screen.width < 900) {
-      productionWrapper.getAttribute('data-swiper-parallax') = `0%`;
-      productionWrapper.getAttribute('data-swiper-parallax-opacity') = 1;
-   }
-}
+
+
+// // слайдер в слайдере
+// new Swiper('.projects-slider', {
+//    // курсор перетаскивания
+//    grabCursor: true,
+//    // навигация
+//    // пагинация, текущее положение, прогрессбар
+//    pagination: {
+//       el: '.swiper-pagination',
+//       // буллеты
+//       clickable: true,
+//    },
+//    // корректная работа перетаскивания, свайпа для дочернего слайдера
+//    nested: true,
+//    // кол-во слайдов для показа
+//    slidesPerView: 2,
+// });

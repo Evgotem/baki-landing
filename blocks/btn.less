@@ -33,7 +33,7 @@
    max-width:320px;
    display: inline-block;
   
-   @media @maw375 {
+   @media @maw414 {
       font-size: 13px;
       max-width: 89px;
    }
@@ -49,7 +49,7 @@
       border-radius: 50%;
       background: @secondary;
       transition: all 0.2s ease;
-      @media @maw375 {
+      @media @maw414 {
          width: 34px;
          height: 34px;
          right: -50px;
@@ -69,7 +69,7 @@
       transform-origin: center center;
       transform: rotate(45deg) translateY(-50%);
       z-index: 10;
-      @media @maw375 {
+      @media @maw414 {
          width: 10px;
          height: 10px;
          right: -32px;
@@ -96,7 +96,7 @@
 
    }
    &::before {
-      right: 0;
+      right: 2px;
       width: 10px;
       height: 10px;
       border-color: #fff;
@@ -136,5 +136,21 @@
       @media @maw414 {
          font-size: 12px;
       }
+      @media @maw320 {
+         flex-direction: column;
+         align-items: baseline;
+      }
+   }
+}
+.warranty-btn {
+   color: @black;
+   &::after {
+      background: @black;
+   }
+   &::before {
+      border-color: @secondary;
+   }
+   @media @maw1440 {
+      margin-right: 34px;
    }
 }
