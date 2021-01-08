@@ -25,7 +25,7 @@
                <div class="screen__content">
                   <div class="container">
                      <header class="header">
-                        <div class="header__logo">
+                        <div class="header__logo logo">
                            <a href="#">
                               <img src="img/Logo.svg" alt="Baki logo">
                            </a>
@@ -474,44 +474,49 @@
                   </div>
 
 
-                 <div class="projects-slider swiper-container">
-                    <div class="projects-slider__wrapper swiper-wrapper">
-                        <div class="projects-slider__slide swiper-slide">
-                           <div class="projects-slider__image">
-                              <img src="img/project_01.jpg" alt="">
+                <div class="container">
+                    <div class="projects-slider swiper-container">
+                       <div class="projects-slider__wrapper swiper-wrapper">
+                           <div class="projects-slider__slide swiper-slide">
+                              <div class="projects-slider__image">
+                                 <img src="img/project_01.jpg" alt="">
+                              </div>
+                              <div class="projects-slider__title">
+                                 Башни Рожновского
+                              </div>
+                              <div class="projects-slider__text">
+                                 It wasn’t until Mao’s Cultural Revolution that some of the basic tenets of Confucian ethics were publicly denounced for the first time. Mao was future oriented and utopian in his politics.
+                              </div>
+                              <a href="#" class="projects-slider__btn">
+                                 ПОДРОБНЕЕ
+                              </a>
                            </div>
-                           <div class="projects-slider__title">
-                              Башни Рожновского
+                           <div class=" projects-slider__slide swiper-slide">
+                              <div class="projects-slider__image">
+                                 <img src="img/project_02.jpg" alt="">
+                              </div>
+                              <div class="projects-slider__title">
+                                 Кованые перила
+                              </div>
+                              <div class="projects-slider__text">
+                                 While this is seen by many as a way for China to build a political future based on 
+                                 its philosophical past.
+                              </div>
+                              <a href="#" class="projects-slider__btn">
+                                 ПОДРОБНЕЕ
+                              </a>
                            </div>
-                           <div class="projects-slider__text">
-                              It wasn’t until Mao’s Cultural Revolution that some of the basic tenets of Confucian ethics were publicly denounced for the first time. Mao was future oriented and utopian in his politics.
-                           </div>
-                           <a href="#" class="projects-slider__btn">
-                              ПОДРОБНЕЕ
-                           </a>
-                        </div>
-                        <div class=" projects-slider__slide swiper-slide">
-                           <div class="projects-slider__image">
-                              <img src="img/project_02.jpg" alt="">
-                           </div>
-                           <div class="projects-slider__title">
-                              Кованые перила
-                           </div>
-                           <div class="projects-slider__text">
-                              While this is seen by many as a way for China to build a political future based on 
-                              its philosophical past.
-                           </div>
-                           <a href="#" class="projects-slider__btn">
-                              ПОДРОБНЕЕ
-                           </a>
-                        </div>
-                    </div> <!-- projects-slider__wrapper-->
-                 </div> <!-- projects-slider-->
+                           <div class="swiper-btn-prev"></div>
+                           <div class="swiper-btn-next"></div>
+                           <div class="swiper-pagination"></div>
+                       </div> <!-- projects-slider__wrapper-->
+                    </div> <!-- projects-slider-->
+                </div>
                </div> <!-- screen__content -->
             </section>
 
-            <section id='contacts' class="contacts page__screen screen ">
-               <div class="screen__content contacts-screen__content">
+            <section id='contacts' class="contacts page__screen  ">
+               <div class="screen__content">
                   <div class="screen__title">
                      Контакты
                   </div>
@@ -575,11 +580,39 @@
                      </div>
                   </div>   <!-- /container-->
                   <footer class="footer">
-                   
-                </footer>
+                     <div class="container footer__container">
+                        <div class="footer__logo logo">
+                           <a href="#">
+                              <img src="img/Logo.svg" alt="Baki logo">
+                           </a>
+                        </div>
+                        <div class="footer__menu">
+                           <a class="footer__link" href="#">Продукция</a>
+                           <a class="footer__link" href="#">Преимущества</a>
+                           <a class="footer__link" href="#">О нас</a>
+                           <a class="footer__link" href="#">Контакты</a>
+                        </div>
+                        <div class="footer__wrapper">
+                           <div class="footer__contacts footer__contacts--hidden">
+                              <a href="tel:+79277562997" class="footer__phone footer__contacts-link">
+                                 +7 927 756 29 97
+                              </a>
+                              <a href="mailto:bak63samara@yandex.ru" class="footer__mail footer__contacts-link">
+                                 bak63samara@yandex.ru
+                              </a>
+                           </div>
+                           <div class="footer__button btn">
+                              <a href="#" class="btn__text">
+                                 Задать&nbsp;вопрос <span class='phone__icon'><img src="img/phone-icon.png" alt=""
+                                       width="16" height="16"></span>
+                              </a>
+                           </div>
+                        </div> <!-- /header__wrapper-->
+                     </div>
+                  </footer>
                </div>  <!-- /screen__content -->     
             </section>
-         </div>
+         </div> <!-- /page__wrapper-->
       </div> <!-- /page-->
       <div class="page__pagination"></div>
       <div class="page__scroll"></div>

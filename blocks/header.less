@@ -1,5 +1,15 @@
 // main: ../css/style.less
 
+.logo {
+   img {
+      width: 36px;
+      height: auto;
+      @media @maw320 {
+         width: 16px;
+         height: auto;
+      }
+   }
+}
 .header {
    max-width: 100%;
    padding: 45px 0 0 0;
@@ -20,16 +30,6 @@
       background: @primary;
       transition: background 1s ease;
       position: relative;
-   }
-   &__logo {
-      img {
-         width: 36px;
-         height: auto;
-         @media @maw320 {
-            width: 16px;
-            height: auto;
-         }
-      }
    }
    &__menu {
       padding-left: 72px;

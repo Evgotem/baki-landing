@@ -2,6 +2,73 @@
 
 .footer {
    background: @primary;
-   min-height: 150px;   
-   flex: 1 0 auto;
+   min-height: 160px;   
+   display: flex;
+   align-items: center;
+   padding: 0 15px;
+   &__container {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      flex-grow: 1;
+      justify-content: space-between;
+      @media @maw1440 {
+         justify-content: space-evenly;
+      }
+      @media @maw1200 {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+      }
+   }
+   &__menu {
+      display: flex;
+      @media @maw1200 {
+         flex-wrap: wrap;
+         padding: 15px;
+         justify-content: baseline;
+      }
+   }
+   &__link {
+      box-sizing: border-box;
+      margin-right: 50px;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s ease;
+      @media @maw1440 {
+         margin-right: 30px;
+      }
+      @media @maw1200 {
+         margin-right: 0px;
+         padding: 7px;
+         display: block;
+      }
+      &:last-child {
+         margin-right: 0;
+      }
+      &:hover {
+         color: @secondary;
+         border-bottom: 3px solid @secondary;
+         transition: all 0.2s ease;
+      }
+   }
+   &__wrapper {
+      display: flex;
+      align-items: center;
+      @media @maw1200 {
+         flex-direction: column;
+      }
+   }
+   &__phone {
+      margin-bottom: 5px;
+   }
+   &__contacts {
+      display: flex;
+      flex-direction: column;
+      margin-right: 10px;
+      a {
+         margin-bottom: 15px;
+         text-align: center;
+      }
+   }
+  
 }

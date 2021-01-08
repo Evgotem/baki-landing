@@ -26,11 +26,11 @@ let pageSlider = new Swiper('.page', {
    // управление колесом мыши
    mousewheel: {
       // чувствительность калеса мыши
-   
+
       // класс объекта, на котором будет срабатывать прокрутка мышью.
       // eventsTarget: '.image-slider'
    },
-   
+
    parallax: false,
    // отключение функционала если слайдов меньше чем нужно
    watchOverflow: true,
@@ -57,14 +57,14 @@ let pageSlider = new Swiper('.page', {
       clickable: true,
       bulletClass: 'page__bullet',
       bulletActiveClass: 'page__bullet_active',
-     renderBullet: function (index, className) {
-        let zero = '0';
-        if (index > 8) {
-           zero = '';
-        }
-      // нумерация 01, 02 и тд.
-        return `<span class=${className}><span class='page__bullet--number'>${zero+(index+1)}</span></span>`;
-     }
+      renderBullet: function (index, className) {
+         let zero = '0';
+         if (index > 8) {
+            zero = '';
+         }
+         // нумерация 01, 02 и тд.
+         return `<span class=${className}><span class='page__bullet--number'>${zero + (index + 1)}</span></span>`;
+      }
    },
    // скролл
    scrollbar: {
@@ -94,13 +94,33 @@ let pageSlider = new Swiper('.page', {
 });
 
 let menuLinks = document.querySelectorAll('.header__link');
-
+let footerLinks = document.querySelectorAll('.footer__link');
 function menuSlider() {
    if (menuLinks.length > 0) {
       menuLinks[pageSlider.realIndex].classList.add('active');
       for (let i = 0; i < menuLinks.length; i++) {
          const menuLink = menuLinks[i];
+         const footerLink = footerLinks[i];
          menuLink.onclick = e => {
+            menuSliderRemove();
+            // сделать чтобы при нажатии на пункт меню слайдилось на определенный экран
+            if (i === 0) {
+               pageSlider.slideTo(1, 800);
+            }
+            else if (i === 1) {
+               pageSlider.slideTo(4, 800);
+            }
+            else if (i === 2) {
+               pageSlider.slideTo(6, 800);
+            }
+            else if (i === 3) {
+               pageSlider.slideTo(8, 800);
+            }
+            menuLink.classList.add('active');
+            e.preventDefault();
+            console.log(pageSlider.realIndex);
+         }
+         footerLink.onclick = e => {
             menuSliderRemove();
             // сделать чтобы при нажатии на пункт меню слайдилось на определенный экран
             if (i === 0) {
@@ -133,7 +153,7 @@ function menuSliderRemove() {
 
 // отключаем поэкранную прокрутку когда контента больше 100% по высоте
 function setScrollType() {
-   if(wrapper.classList.contains('free')) {
+   if (wrapper.classList.contains('free')) {
       wrapper.classList.remove('free');
       pageSlider.params.freeMode = false;
    }
@@ -165,7 +185,7 @@ burger.onclick = () => {
 
 // let section = document.querySelectorAll('section');
 // for (let i = 0; i < section.length; i++) {
-   
+
 //    if(sectionElement.style.backgroundColor == "#e5e5e5") {
 //       document.querySelector('.page__bullet_active .page__bullet--number').style.color = '#434343';
 //    }
@@ -174,19 +194,21 @@ burger.onclick = () => {
 
 
 
-// // слайдер в слайдере
-// new Swiper('.projects-slider', {
-//    // курсор перетаскивания
-//    grabCursor: true,
-//    // навигация
-//    // пагинация, текущее положение, прогрессбар
-//    pagination: {
-//       el: '.swiper-pagination',
-//       // буллеты
-//       clickable: true,
-//    },
-//    // корректная работа перетаскивания, свайпа для дочернего слайдера
-//    nested: true,
-//    // кол-во слайдов для показа
-//    slidesPerView: 2,
-// });
+// слайдер в слайдере
+new Swiper('.projects-slider', {
+   // навигация
+   // пагинация, текущее положение, прогрессбар
+   pagination: {
+      el: '.swiper-pagination',
+      // буллеты
+      clickable: true,
+   },
+   // корректная работа перетаскивания, свайпа для дочернего слайдера
+   nested: true,
+   // кол-во слайдов для показа
+   slidesPerView: 2,
+   navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+   },
+});
