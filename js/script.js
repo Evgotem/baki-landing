@@ -203,12 +203,36 @@ new Swiper('.projects-slider', {
       // буллеты
       clickable: true,
    },
+   autoHeight: true,
    // корректная работа перетаскивания, свайпа для дочернего слайдера
    nested: true,
    // кол-во слайдов для показа
-   slidesPerView: 2,
+   slidesPerView: 1,
    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
+      nextEl: '.swiper-btn-next',
+      prevEl: '.swiper-btn-prev'
    },
+   loop: true,
+   breakpoints: {
+      1440: {
+         slidesPerView: 2,
+      },
+   },
+   spaceBetween: 15,
+   pagination: {
+      el: '.swiper__pagination',
+      type: 'bullets',
+      clickable: true,
+      bulletClass: 'swiper__bullet',
+      bulletActiveClass: 'swiper__bullet_active',
+      renderBullet: function (index, className) {
+         let zero = '0';
+         if (index > 8) {
+            zero = '';
+         }
+         // нумерация 01, 02 и тд.
+         return `<span class=${className}><span class='swiper__bullet--number'>${zero + (index + 1)}</span></span>`;
+      }
+   }
 });
+

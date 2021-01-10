@@ -155,20 +155,64 @@
    }
 }
 
-.swiper-btn-next {
-
-   background-image: url('../img/right-arrow.svg');
+.swiper-btn-body {
    width: 70px;
    height: 70px;
    position: absolute;
+   z-index: 50;
+   top: 30%;
+   @media @maw1440 {
+      display: none;
+   }
+}
+.swiper-btn-next {
+   .swiper-btn-body;
+   background-image: url('../img/right-arrow.svg');
    right: 0;
-   top: 50%;
 }
 .swiper-btn-prev {
+   .swiper-btn-body;
    background-image: url('../img/left-arrow.svg');
-   width: 70px;
-   height: 70px;
-   position: absolute;
    left: 0;
-   top: 50%;
+   transform: translateX(-50%);
+}
+.swiper-pagination {
+   display: none;
+   @media @maw1440 {
+      position: absolute;
+      right: 50%;
+      bottom: -50px;
+      transform: translateX(-50%);
+      display: flex;
+   }
+   &__bullet {
+      width: 10px;
+      height: 10px;
+      outline: none;
+      cursor: pointer;
+      background-color: transparent;
+      border: 1px solid white;
+      margin: 8px 0;
+      border-radius: 50%;
+      transition: background-color 0.3s ease 0s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &_active {
+         margin: 20px 0;
+         border: 5px solid @secondary;
+         width: 38px;
+         height: 38px;
+         transform: translateX(-19px);
+      }
+      &--number {
+         display: none;
+         color: white;
+      }
+      &_active .swiper__bullet--number {
+         display: block;
+         font-weight: 800;
+         font-size: 16px;
+      }
+   }   
 }
