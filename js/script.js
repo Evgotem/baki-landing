@@ -236,8 +236,3 @@ new Swiper('.projects-slider', {
    }
 });
 
-let section = document.querySelectorAll('section');
-for (let i = 0; i <section.length; i++) {
-   let activeSection = document.querySelector('.'+section[i].classList[0]);
-   console.log(activeSection.style);
-}
