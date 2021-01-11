@@ -162,28 +162,46 @@
    z-index: 50;
    top: 30%;
    @media @maw1440 {
-      display: none;
+      width: 40px;
+      height: 40px;
+      background-size: cover;
    }
 }
 .swiper-btn-next {
    .swiper-btn-body;
    background-image: url('../img/right-arrow.svg');
    right: 0;
+   transform: translateX(10%);
+   @media @maw1440 {
+      transform: translateX(0);
+      right: 5%;
+   }
+
 }
 .swiper-btn-prev {
    .swiper-btn-body;
    background-image: url('../img/left-arrow.svg');
    left: 0;
    transform: translateX(-50%);
-}
-.swiper-pagination {
-   display: none;
    @media @maw1440 {
-      position: absolute;
-      right: 50%;
-      bottom: -50px;
-      transform: translateX(-50%);
-      display: flex;
+      transform: translateX(0);
+      left: 5%;
+   }
+
+}
+
+
+.swiper {
+   &__pagination {
+      display: none;
+      @media @maw1440 {
+         position: absolute;
+         right: 50%;
+         transform: translateX(50%);
+         bottom: -80px;
+         display: flex;
+         align-items: center;
+      }
    }
    &__bullet {
       width: 10px;
@@ -192,18 +210,16 @@
       cursor: pointer;
       background-color: transparent;
       border: 1px solid white;
-      margin: 8px 0;
       border-radius: 50%;
       transition: background-color 0.3s ease 0s;
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-right: 15px;
       &_active {
-         margin: 20px 0;
          border: 5px solid @secondary;
          width: 38px;
          height: 38px;
-         transform: translateX(-19px);
       }
       &--number {
          display: none;
