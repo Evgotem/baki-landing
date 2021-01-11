@@ -3,12 +3,13 @@
 .projects {
    padding-top: 25px;
    @media @maw1440 {
-      padding-bottom: 50px;
+      padding-bottom: 105px;
    }
    color: @black;
    &__container {
       position: relative;
       max-width: 100%;
+      min-height: 662px;
    }
    &-slider {
       margin-top: 50px;
@@ -16,11 +17,14 @@
       @media @maw1440 {
          max-width: 600px;
       }
+      
       &__wrapper {
          min-width: 0;
+         position: relative;
       }
       &__image {
          max-width: 100%;
+         text-align: center;
          @media @maw1440 {
             max-width: 600px;
          }
