@@ -9,7 +9,7 @@
    background-repeat: no-repeat;
    color: #fff;
    background-position: 12% 40%;
-   
+   z-index: 50;
    @media (min-width: 1800px) {
       background-position: 32% -55px;
    }
@@ -102,11 +102,13 @@
    }
    &__content {
       margin-left: auto;
-      max-width: fit-content;
+      max-width: 60%;
       padding-top: 197px;
       @media @maw1440 {
          padding-top: 136px;
          padding-right: 15px;
+         max-width: 90%;
+         max-width: fit-content;
       }
       @media @maw1440 {
          padding-bottom: 130px;

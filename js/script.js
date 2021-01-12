@@ -236,8 +236,11 @@ new Swiper('.projects-slider', {
    }
 });
 
-let section = document.querySelectorAll('section');
-for (let i = 0; i <section.length; i++) {
-   let activeSection = document.querySelector('.'+section[i].classList[0]);
-   console.log(activeSection.style);
-}
+
+// кнопка скролла вверх
+
+//    let toTopButton = document.querySelector('.to-top-btn');
+//    toTopButton.onclick = () => {
+//       pageSlider.slideTo(0, 800);
+//    }
+

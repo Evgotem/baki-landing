@@ -9,7 +9,7 @@
    display: flex;
    justify-content: center;
    flex-wrap: wrap;
-   @media @maw900 {
+   @media @maw1200 {
       flex-direction: column;
       align-items: center;
    }
@@ -19,12 +19,15 @@
    flex-direction: column;
    color: @black;
    max-width: 25%;
-   @media @maw900 {
+   @media @maw1200 {
+      max-width: 60%;
+   }
+   @media @maw630 {
       max-width: 85%;
    }
    &:first-child {
       margin-right: 70px;
-      @media @maw900 {
+      @media @maw1200 {
          margin-right: 0;
          margin-bottom: 70px;
       }
@@ -34,7 +37,7 @@
       line-height: 46px;
       margin: 20px 0;
       font-size: 800;
-      @media @maw900 {
+      @media @maw1200 {
          font-size: 30px;
       }
       @media @maw320 {
@@ -47,7 +50,7 @@
       &:last-of-type {
          margin-bottom: 15px;
       }
-      @media @maw900 {
+      @media @maw1200 {
          &:last-of-type {
             margin-bottom: 25px;
          }

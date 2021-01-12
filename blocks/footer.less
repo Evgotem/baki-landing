@@ -64,11 +64,23 @@
    &__contacts {
       display: flex;
       flex-direction: column;
-      margin-right: 10px;
+      margin-right: 20px;
+      align-items: flex-end;
+      @media @maw1200 {
+         align-items: center;
+         margin-right: 0;
+      }
       a {
          margin-bottom: 15px;
          text-align: center;
+         &:last-child {
+            margin-bottom: 0;
+            @media @maw1200 {
+               margin-bottom: 15px;
+            }
+         }
       }
+      
    }
   
 }
