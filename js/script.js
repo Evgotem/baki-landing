@@ -244,3 +244,45 @@ new Swiper('.projects-slider', {
 //       pageSlider.slideTo(0, 800);
 //    }
 
+// открытие/закрытие модального окна
+let modalLinks = document.querySelectorAll('.modal-link');
+for (let i = 0; i < modalLinks.length; i++) {
+   let modalLink = modalLinks[i];
+   modalLink.onclick = () => {
+      document.querySelector('.modal').classList.add('open');
+   }
+}
+const modalClose = document.querySelector('.modal__close');
+modalClose.onclick = () => {
+   document.querySelector('.modal').classList.remove('open');
+}
+
+let modalBtn = document.querySelector('.modal-btn');
+modalBtn.onclick = () => {
+   document.querySelector('.thank-modal').classList.add('open');
+}
+const thankClose = document.querySelector('.thank__close');
+thankClose.onclick = () => {
+   document.querySelector('.thank-modal').classList.remove('open');
+   document.querySelector('.modal').classList.remove('open');
+}
+// const modalLinks = document.querySelectorAll('.modal-link')
+// const body = document.querySelector('body');
+// const lockPadding = document.querySelectorAll('.lock-padding');
+
+// let unlock = true;
+
+// const timeout = 800;
+
+// if (modalLinks.length > 0) {
+//    for (let i = 0; i < modalLinks.length; i++) {
+//       const modalLink = modalLinks[i];
+//       modalLink.addEventListener('click', function(e) {
+//          const modalName = modalLink.getAttribute('href').replace('#', '');
+//          const currentModal = document.getElementById(modalName);
+//          modalOpen(currentModal);
+//          e.preventDefault()
+//          ;
+//       })
+//    }
+// }

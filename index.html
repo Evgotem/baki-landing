@@ -19,6 +19,39 @@
 
 <body>
    <!-- <a href="#" class="to-top-btn"></a> -->
+   <div class="modal">
+      <div class="thank-modal">
+         <a href="#" class="thank__close">X</a>
+         <div class="thank__content">
+            <div class="thank__title">
+               СПАСИБО!
+            </div>
+            <div class="thank__text">
+               Ваша заявка находится в обработке.
+               Наш менеджер свяжется с вами в ближайшее время
+            </div>
+         </div>
+      </div>
+      <a href="#" class="modal__close">X</a>
+      <div class="modal__body">
+         <div class="modal__content">
+            <div class="modal__title">
+               Задать вопрос
+            </div>
+            <div class="modal__text">
+               Заполните форму и наш менеджер свяжется 
+               с вами в ближайшее время
+            </div>
+            <form action="" class="modal__form">
+               <input type="name" class="modal__input" placeholder="Имя">
+               <input type="phone" class="modal__input" placeholder="Телефон">
+               <input type="mail" class="modal__input" placeholder="Email">
+               <textarea name="" id=""  class="modal__area" placeholder="Введите вопрос"></textarea>
+               <button class='modal-btn'>Отправить</button>
+            </form>
+         </div>
+      </div>
+   </div>
    <div class="wrapper">
       <div class="page">
          <div class="page__wrapper">
@@ -56,7 +89,7 @@
                               </a>
                            </div>
                            <div class="header__button btn">
-                              <a href="tel:+79277562997" class="btn__text">
+                              <a href="#modal" class="btn__text modal-link">
                                  Задать&nbsp;вопрос <span class='phone__icon'><img src="img/phone-icon.png" alt=""
                                        width="16" height="16"></span>
                               </a>
@@ -76,7 +109,7 @@
                            <div class="preview__subtitle">
                               Производим и продаем высококачественные пивные баки и емкости для напитков
                            </div>
-                           <a href="#" class="request-btn color--secondary">
+                           <a href="#modal" class="request-btn color--secondary modal-link">
                               Бесплатная консультация
                            </a>
                         </div>
@@ -106,7 +139,7 @@
                               Мы изготавливаем прочные баки для производства, транспортировки и продажи пива.
                            </p>
                            <div class="main-btn__wrapper">
-                              <a href="#" class="request-btn main-btn">
+                              <a href="#" class="request-btn main-btn ">
                                  <span class="main-btn__text">Оставить заявку </span>
                               </a>
                               <a href="#">
@@ -129,7 +162,7 @@
                               наземного типа).
                            </p>
                            <div class="main-btn__wrapper">
-                              <a href="#" class="request-btn main-btn">
+                              <a href="#" class="request-btn main-btn ">
                                  <span class="main-btn__text">Оставить заявку</span>
                               </a>
                               <a href="#">
@@ -188,7 +221,7 @@
                               тонн.
                            </p>
                            <div class="main-btn__wrapper">
-                              <a href="#" class="request-btn main-btn">
+                              <a href="#" class="request-btn main-btn ">
                                  <span class="main-btn__text">
                                     Оставить заявку
                                  </span>
@@ -213,7 +246,7 @@
                               Изготавливаем по эскизам заказчика.
                            </p>
                            <div class="main-btn__wrapper">
-                              <a href="#" class="request-btn main-btn">
+                              <a href="#" class="request-btn main-btn ">
                                  <span class="main-btn__text">
                                     Оставить заявку
                                  </span>
@@ -253,7 +286,7 @@
                               Максимальная толщина металла на рубку <span>20 mm</span>
                            </p>
                            <div class="main-btn__wrapper">
-                              <a href="#" class="request-btn main-btn">
+                              <a href="#" class="request-btn main-btn ">
                                  <span class="main-btn__text">
                                     Оставить заявку
                                  </span>
@@ -282,7 +315,7 @@
                               Трехвалковые валковые <span>МОДЕЛЬ ИБ2222 350 мм.</span>
                            </p>
                            <div class="main-btn__wrapper">
-                              <a href="#" class="request-btn main-btn">
+                              <a href="#" class="request-btn main-btn ">
                                  <span class="main-btn__text">
                                     Оставить заявку
                                  </span>
@@ -379,7 +412,7 @@
                            Каждый наш клиент может заказать услугу постгарантийного обслуживания изготовленного нами
                            оборудования.
                         </div>
-                        <a href="#" class="request-btn warranty-btn">
+                        <a href="#modal" class="request-btn warranty-btn modal-link">
                            Бесплатная консультация
                         </a>
                      </div>
@@ -672,7 +705,7 @@
                               </a>
                            </div>
                            <div class="footer__button btn">
-                              <a href="#" class="btn__text">
+                              <a href="#modal" class="btn__text modal-link">
                                  Задать&nbsp;вопрос <span class='phone__icon'><img src="img/phone-icon.png" alt=""
                                        width="16" height="16"></span>
                               </a>
