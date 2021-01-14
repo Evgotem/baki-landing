@@ -248,21 +248,25 @@ new Swiper('.projects-slider', {
 let modalLinks = document.querySelectorAll('.modal-link');
 for (let i = 0; i < modalLinks.length; i++) {
    let modalLink = modalLinks[i];
-   modalLink.onclick = () => {
+   modalLink.onclick = (e) => {
+      e.preventDefault();
       document.querySelector('.modal').classList.add('open');
    }
 }
 const modalClose = document.querySelector('.modal__close');
-modalClose.onclick = () => {
+modalClose.onclick = (e) => {
+   e.preventDefault();
    document.querySelector('.modal').classList.remove('open');
 }
 
 let modalBtn = document.querySelector('.modal-btn');
-modalBtn.onclick = () => {
+modalBtn.onclick = (e) => {
+   e.preventDefault();
    document.querySelector('.thank-modal').classList.add('open');
 }
 const thankClose = document.querySelector('.thank__close');
-thankClose.onclick = () => {
+thankClose.onclick = (e) => {
+   e.preventDefault();
    document.querySelector('.thank-modal').classList.remove('open');
    document.querySelector('.modal').classList.remove('open');
 }
