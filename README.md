@@ -1,4 +1,4 @@
 # baki-landing for practice
 
 ## Go to github pages
-> https://evgotem/github.io/baki-landing
+> https://evgotem.github.io/baki-landing/
