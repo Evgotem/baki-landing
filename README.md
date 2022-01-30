@@ -1,7 +1,7 @@
-# baki-landing for practice HTML, CSS and JS
+# Landing page for practice HTML, CSS and JS
 
-## Go to github pages
+[Github Pages link](https://evgotem.github.io/baki-landing/)
 
-> https://evgotem.github.io/baki-landing/
+
 
 
